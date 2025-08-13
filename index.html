@@ -75,6 +75,59 @@
     li {
       margin-bottom: 4px;
     }
+
+    /* Solución para móviles */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        min-height: auto;
+        margin: 0;
+        box-shadow: none;
+      }
+      
+      .sidebar {
+        padding: 30px 20px;
+        text-align: center; /* Centra contenido en móviles */
+      }
+      
+      .sidebar img {
+        margin: 0 auto 15px; /* Centra la imagen */
+      }
+      
+      .sidebar ul {
+        padding-left: 0;
+        list-style-position: inside; /* Alinea viñetas con texto */
+      }
+      
+      .main {
+        padding: 30px 20px;
+      }
+      
+      body {
+        background: none; /* Elimina fondo fijo en móviles */
+        background-color: #f5f5f5;
+      }
+    }
+
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+      .sidebar, .main {
+        padding: 20px 15px;
+      }
+      
+      .sidebar h1 {
+        font-size: 1.5em;
+      }
+      
+      .sidebar h2, .main h2 {
+        font-size: 1.1em;
+      }
+      
+      .main h3 {
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 
